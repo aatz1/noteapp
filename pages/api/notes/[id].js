@@ -15,9 +15,19 @@ export default async (req, res) => {
     try {
         const getmethod = checkmethod(true, req, res);
         if(getmethod){
+             try{
+                const note = await Note.findById(id)
 
+                if(!note) {
+                    
+                }
+                
+
+             } catch(err) {
+                 DefserverStatus("Internal server error", 500, req, res)
+             }
         } else {
-            
+
         }
 
     } catch(err) {
