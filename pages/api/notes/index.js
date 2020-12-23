@@ -11,18 +11,20 @@ export default async (req, res) => {
         if(methodisget) {
             try { //method get
                 const notes = await Note.find({});
-                res.status(200).json({ error: "no errors", statuscode: 200, data: notes})
+
+                DefserverStatus("No errors", 200, notes, req, res)
+               
             } catch(err) {
-                DefserverStatus("Internal server error", 500, req, res)
+                DefserverStatus("Internal server error", 500, {}, req, res)
             }
             
         } else { //method post
             const note = await Note.create(req.body)
 
-            res.status(201).json({ error: "no errors", statuscode: 201, data: note})
+            DefserverStatus("No errors", 200, note, req, res)
         }
     } catch(err) {
-        DefserverStatus("Internal server error", 500, req, res) 
+        DefserverStatus("Internal server error", 500, {}, req, res) 
     }
 
 }
