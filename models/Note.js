@@ -1,6 +1,6 @@
 import { Schema, models, model } from 'mongoose';
 
-const NoteSchema  =new Schema({
+const NoteSchema  = new Schema({
     title: {
         type: String,
         required: [true, 'Please add a title'],
@@ -14,5 +14,6 @@ const NoteSchema  =new Schema({
         maxlength: [200, 'Description cant have more than 200 characters']
     }
 })
+
 
 module.exports = models.Note || model('Note', NoteSchema);
