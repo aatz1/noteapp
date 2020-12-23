@@ -1,3 +1,5 @@
 # Note app
 
-## Routes and descriptions
+### Routes and descriptions
+
+* GET /api/notes --> test
