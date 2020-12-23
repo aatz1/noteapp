@@ -2,4 +2,4 @@
 
 ### Routes and descriptions
 
-* GET /api/notes --> test
+* GET /api/notes --> 
