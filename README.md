@@ -8,6 +8,6 @@
 
 * POST /api/notes *****-->***** This routes you need to pass a json with {*****title*****:  "title of the note", *****description*****: "content of the note"}; Return {*****success*****: (**Return true if theres no errors**), *****statuscode*****: (**Return status code**), *****msg*****: (**Return server message**), *****data*****: (**Return the object of the created data**) }
 
-* PUT /api/notes/{note id} *****-->***** Return { *****success*****: (**Return true if theres no errors**), *****statuscode*****: (**Return status code**), *****msg*****: (**Return server message**), *****data*****: (**Return the note object passed in the route**) }
+* PUT /api/notes/{note id} *****-->*****  This route you need to pass a json with the data you want to update on the note  {*****title*****:  "title of the note", *****description*****: "content of the note"};   Return { *****success*****: (**Return true if theres no errors**), *****statuscode*****: (**Return status code**), *****msg*****: (**Return server message**), *****data*****: (**Return the note object passed in the route**) }
 
 * DELETE /api/notes/{note id} *****-->***** Return { *****success*****: (**Return true if theres no errors**), *****statuscode*****: (**Return status code**), *****msg*****: (**Return server message**), *****data*****: (**Return empty object**) }
